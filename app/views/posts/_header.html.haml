@@ -1,8 +1,12 @@
 .header
   .header_logo
     My Cabinet
-  .header_serach
-    %input.header_serach__posts
+  .header_search
+    %form.pict-search(id="search" method="get")
+      %input.header_serach__posts(type="text" id="word")
+      %button.search-botton(type="submit" id="seach-botton")
+        =icon("fas","search")
+
   .header_user
     .header_user__name
       name

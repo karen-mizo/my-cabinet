@@ -5,32 +5,68 @@
   height: 100vh;
   .header{
     display: flex;
-    background-image: url(pngtree-indoor-minimalist-japanese-decoration-background-material-image_141091);
-    border-bottom: solid;
-    border-color: #879de0;
-    border-width: 1px;
+    background-color: antiquewhite;
     align-items: center;
+    justify-content: space-between;
     .header_logo{
       height: 100px;
-      width: 25%;
-      font-family: 'Copperplate',sans-serif;
-      font-size: 55px;
-      color: navy;
-      margin: 0px;
+      font-family: 'Papyrus',sans-serif;
+      font-size: 50px;
+      color: rgb(153, 93, 15);
+      margin-top: 5px;
     }
-    .header_serach{
-      width: 45%;
-      height: 80px;
-      margin-right: 5px;
+    .header_search{
+      width: 700px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      margin-left: 40px;
+      .pict-search{
+        position: relative;
+        background-color:rgb(219, 204, 188);
+        height: 50px;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        .header_serach__posts{
+          height: 50px;
+          width:550px;
+          border: none;
+          background-color: transparent;
+          margin-right: 10px;
+        }
+        .search-botton{
+          width: 50px;
+          border: none;
+          font-size: 20px;
+          background-color: transparent;
+        }
+      }
     }
     .header_user{
-      width: 30%;
-      background-color: paleturquoise;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 20%;
+      .header_user__name{
+        font-family: 'Papyrus',sans-serif;
+        color: rgb(153, 93, 15);
+        font-size: 30px;
+        margin-right: 10px;
+      }
+      a{
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: black;
+      }
+
     }
   }
 
   .main{
-    background-color: mintcream;
+    background-color: rgb(255, 250, 245);
     height: calc(100vh - 100px);
   }
 }
