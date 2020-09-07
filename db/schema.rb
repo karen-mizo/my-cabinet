@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200627131025) do
+ActiveRecord::Schema.define(version: 20200701141017) do
+
+  create_table "cabinets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "post_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_cabinets_on_post_id", using: :btree
+    t.index ["user_id"], name: "index_cabinets_on_user_id", using: :btree
+  end
+
+  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "name",       limit: 65535, null: false
+    t.text     "text",       limit: 65535
+    t.string   "image"
+    t.integer  "user_id",                  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",       null: false
@@ -20,4 +39,6 @@ ActiveRecord::Schema.define(version: 20200627131025) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "cabinets", "users"
+  add_foreign_key "posts", "users"
 end

@@ -29,7 +29,7 @@
         justify-content: space-between;
         .header_serach__posts{
           height: 50px;
-          width:550px;
+          width:700px;
           border: none;
           background-color: transparent;
           margin-right: 10px;
@@ -49,7 +49,7 @@
         align-items: center;
         justify-content: center;
         width: 100px;
-        height: 60px;
+        height: 50px;
         background-color:rgb(219, 204, 188);
         border-radius: 4px;
         text-decoration: none;
@@ -74,10 +74,5 @@
         color: black;
       }
     }
-  }
-
-  .main{
-    background-color: rgb(255, 250, 245);
-    height: calc(100vh - 100px);
   }
 }
